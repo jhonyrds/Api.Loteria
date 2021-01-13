@@ -35,7 +35,7 @@ public class ApostaController extends BaseController{
             ListApostaResponse response = apostaService.listarApostas(id);
             return ResponseEntity.status(response.getStatusCode()).body(response);
         } catch (Exception e) {
-            return ResponseEntity.status(500).body("Erro genérico");
+            return ResponseEntity.status(errorBase.getStatusCode()).body(errorBase);
         }
     }
 }
