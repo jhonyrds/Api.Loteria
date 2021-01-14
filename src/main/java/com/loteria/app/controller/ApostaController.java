@@ -20,8 +20,6 @@ public class ApostaController extends BaseController{
     @PostMapping
     public ResponseEntity salvar(@RequestBody ApostaRequest apostaRequest) {
         try {
-
-
             BaseResponse response = apostaService.salvar(apostaRequest);
             return ResponseEntity.status(response.getStatusCode()).body(response);
         } catch (Exception e) {
